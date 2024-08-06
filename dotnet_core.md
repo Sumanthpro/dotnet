@@ -103,7 +103,9 @@
 - create project->install 3 packages -> create class for tables-> add properties
 - then build the program after that
 - create a class with database name and then create a path or place the path of the sqlserver by inherting the base class and then in constructor we write the path as given below
-- ![alt text](image-65.png)
+
+![alt text](image-65.png)
+
 - after that create a dbset properties to perform crud commads or work with
 - after that run this two commands
 

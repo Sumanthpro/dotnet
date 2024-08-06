@@ -141,3 +141,59 @@
 
 - azure is cc platform
 - we can rent hardware,software,os services,VM
+
+## javascript
+
+-
+- syncronus(sequential) and Asyncronus(parllel)
+  in sync the methods will execute sequentially and won't execute the second method until the first method gets executed.
+
+```html
+ <script>var xhr = new XMLHttpRequest();//to interact with web api
+     xhr.open("GET", "https://localhost:7170/api/simple/showall", true);// to get connected with a method true means to call the method asyncronusly(parllel)
+     //false means syncronusly(sequential)
+```
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var xhr = new XMLHttpRequest(); //to interact with web api
+      xhr.open("GET", "https://api.restful-api.dev/objects", true); // to get connected with a method true means to call the method asyncronusly(parllel)
+      //false means syncronusly(sequential)
+      xhr.onload = function (e) {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            console.log(e);
+            document.getElementById("d1").innerText = xhr.responseText;
+            var res = JSON.parse(xhr.responseText); //converts the json to javascript array
+            res.forEach(function (key) {
+              document.getElementById("l").innerHTML +=
+                "<li>" + key.name + "</li>";
+            });
+          } else {
+            console.error(xhr.statusText);
+          }
+        }
+      };
+      xhr.onerror = function (e) {
+        console.error(xhr.statusText);
+      };
+      xhr.send(null);
+    </script>
+    <div id="d1"></div>
+    <ul id="l"></ul>
+  </body>
+</html>
+```
+
+- to make a method asyn then we need to use task.Run(()=>); so that it will run the method which takes less time to execute
+
+### For realtime projects we need to this:
+
+![alt text](image-109.png)

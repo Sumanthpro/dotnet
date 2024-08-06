@@ -10,7 +10,7 @@
 ![alt text](image-1.png)
 
 - framework should has a libraries and a jvm i.e to run a program.
-- FCL'a are nothing but methods i.e inbuilt methods used for our development.
+- FCL's are nothing but methods i.e inbuilt methods used for our development.
 - In dotnet we save the files as dll.-dynamic link library
 - or also in exe files(executable).
 - global assembly cache(GAC) similar to (c:\windows\assembly)
@@ -529,7 +529,7 @@ public delegate void show();
 ```
 
 - it will point to any other method having same signature.
-- delegate method will points the same method witt similar method i.e same signatures.
+- delegate method will points the same method with similar method i.e same signatures.
   ![alt text](image-22.png)
 - how to point?
 
